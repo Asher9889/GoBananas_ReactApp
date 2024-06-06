@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { fetchDataFromAPi } from '../../utils/axios/axios';
-import Appbar from '../../components/menu/Appbar';
 import NewsCard from '../../components/card/NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -8,7 +7,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 const TopHeadlines = () => {
 
-  const [country, setCountry] = useState("in")
+  // const [country, setCountry] = useState("in")
   const [news, setNews] = useState([])
   const [page, setPage] = useState(1)
 

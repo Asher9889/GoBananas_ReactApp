@@ -7,13 +7,13 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 const TopHeadlines = () => {
 
-  const [country, setCountry] = useState("in")
+  // const [country, setCountry] = useState("in")
   const [news, setNews] = useState([])
   const [page, setPage] = useState(1)
 
   const HomePageData= async () => {
     
-    const url=`/top-headlines?country=${country}&page=${page}`
+    const url=`/top-headlines?country=in&page=${page}`
     const res = await fetchDataFromAPi(url);
     const data = res?.data?.articles;
     console.log(data)
@@ -27,7 +27,7 @@ const TopHeadlines = () => {
 
   useEffect(()=>{
     HomePageData()
-  },[])
+  })
 
 
   
